@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grace Haven Church</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Grace Haven Church Logo">
+      <span>Grace Haven Church</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#footer-contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Video Background -->
+  <section id="home" class="hero">
+    <video autoplay muted loop id="hero-video">
+      <source src="videos/hero-background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Welcome to Grace Haven Church</h1>
+      <p>Join us for worship and community</p>
+      <a href="#services" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <h3>Our Story</h3>
+        <p>Founded in 1995, Grace Haven Church began as a small gathering of believers with a vision to create a welcoming community rooted in faith. Today, we are a vibrant family dedicated to sharing the love of Christ and transforming lives through His grace.</p>
+
+        <h3>Our Mission</h3>
+        <p>We inspire, equip, and empower individuals to live a life of faith, hope, and love. Through worship, fellowship, and service, we aim to help people grow in their relationship with Christ and make a positive impact in the world.</p>
+
+        <h3>Our Values</h3>
+        <p>Guided by faith, community, service, and growth, we strive to be a beacon of hope and love in our city. We believe in building meaningful relationships, serving others with compassion, and fostering spiritual growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <!-- Sunday Worship Card -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/worship.jpg');"></div>
+        <h3>Sunday Worship</h3>
+        <p>Join us every Sunday at 10:00 AM for worship and fellowship.</p>
+        <button class="btn learn-more" data-modal="modal1">Learn More</button>
+      </div>
+
+      <!-- Bible Study Card -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/bible-study.jpg');"></div>
+        <h3>Bible Study</h3>
+        <p>Weekly Bible study sessions every Wednesday at 7:00 PM.</p>
+        <button class="btn learn-more" data-modal="modal2">Learn More</button>
+      </div>
+
+      <!-- Ministries Card -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/ministries.jpg');"></div>
+        <h3>Ministries</h3>
+        <p>Discover our diverse ministries that cater to various needs and interests, fostering personal growth, community engagement, and service to others.</p>
+        <button class="btn learn-more" data-modal="modal3">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for Services -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Sunday Worship</h3>
+      <p>Join us every Sunday at 10:00 AM for a powerful time of worship, prayer, and teaching. Our services are designed to help you connect with God and grow in your faith. Whether you're new to church or a long-time believer, you'll find a welcoming community here.</p>
+      <a href="#footer-contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Bible Study</h3>
+      <p>Our weekly Bible study sessions are held every Wednesday at 7:00 PM. Dive deep into the Word of God, ask questions, and engage in meaningful discussions. This is a great opportunity to grow in your understanding of Scripture and build relationships with others.</p>
+      <a href="#footer-contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Ministries</h3>
+      <p>At Grace Haven Church, we offer a variety of ministries to help you grow spiritually and serve others. Our ministries include:</p>
+      <ul>
+        <li><strong>Youth Ministry</strong>: Engaging programs for teens and young adults.</li>
+        <li><strong>Women's Ministry</strong>: Support and fellowship for women of all ages.</li>
+        <li><strong>Men's Ministry</strong>: Encouragement and accountability for men.</li>
+        <li><strong>Outreach Ministry</strong>: Serving our local community and beyond.</li>
+        <li><strong>Worship Ministry</strong>: Leading the church in worship through music.</li>
+      </ul>
+      <a href="#footer-contact" class="btn">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Events Section -->
+  <section id="events" class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-carousel">
+      <!-- Event 1: Valentine's Day Celebration -->
+      <div class="event-card active">
+        <div class="event-image" style="background-image: url('images/valentines.jpg');"></div>
+        <div class="event-details">
+          <h3>Valentine's Day Celebration</h3>
+          <p class="event-date">February 14, 2024 | 6:00 PM - 8:00 PM</p>
+          <p class="event-location">Grace Haven Church Sanctuary</p>
+          <p class="event-description">Celebrate love and fellowship with us! Enjoy an evening of worship, inspiring messages, and a special dinner for couples and families.</p>
+          <a href="#footer-contact" class="btn">RSVP Now</a>
+        </div>
+      </div>
+
+      <!-- Event 2: Community Outreach -->
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('images/outreach.jpg');"></div>
+        <div class="event-details">
+          <h3>Community Outreach</h3>
+          <p class="event-date">March 15, 2024 | 9:00 AM - 12:00 PM</p>
+          <p class="event-location">Hope City Community Center</p>
+          <p class="event-description">Join us as we serve our local community with love and compassion. We'll be distributing food, clothing, and offering prayer support.</p>
+          <a href="#footer-contact" class="btn">RSVP Now</a>
+        </div>
+      </div>
+
+      <!-- Event 3: Easter Sunday Service -->
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('images/easter.jpg');"></div>
+        <div class="event-details">
+          <h3>Easter Sunday Service</h3>
+          <p class="event-date">April 7, 2024 | 10:00 AM - 12:00 PM</p>
+          <p class="event-location">Grace Haven Church Sanctuary</p>
+          <p class="event-description">Celebrate the resurrection of Jesus Christ with us! Join for a special worship service, followed by a community brunch and Easter egg hunt for kids.</p>
+          <a href="#footer-contact" class="btn">RSVP Now</a>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-arrow prev" onclick="changeEvent(-1)">&#10094;</button>
+      <button class="carousel-arrow next" onclick="changeEvent(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial-item active">
+        <p>"Grace Haven Church has been a blessing to my family. The community is warm and welcoming."</p>
+        <span>- John Doe</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"I love the Sunday services. The sermons are always inspiring and uplifting."</p>
+        <span>- Jane Smith</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"The Bible study sessions have deepened my understanding of the Word. Highly recommend!"</p>
+        <span>- Michael Brown</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"The Valentine's Day celebration was such a joyful event. Can't wait for the next one!"</p>
+        <span>- Emily Davis</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"The pastors are so caring and approachable. I feel at home here."</p>
+        <span>- Sarah Wilson</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"The outreach programs are making a real difference in our community. Proud to be a part of it."</p>
+        <span>- David Martinez</span>
+      </div>
+      <div class="testimonial-item">
+        <p>"The music during worship is so uplifting. It truly touches my soul."</p>
+        <span>- Laura Johnson</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer" id="footer-contact">
+  <div class="footer-content">
+    <!-- Footer Logo and Description -->
+    <div class="footer-section about">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Grace Haven Church Logo">
+        <h3>Grace Haven Church</h3>
+      </div>
+      <p>We are a community of believers dedicated to spreading the love of Christ. Join us for worship, fellowship, and community outreach.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#footer-contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="footer-section contact-form">
+      <h3>Contact Us</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Social Media Links and Contact Info -->
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <!-- Facebook Login Page -->
+        <a href="https://www.facebook.com/login" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <!-- Twitter Login Page -->
+        <a href="https://twitter.com/login" target="_blank"><i class="fab fa-twitter"></i></a>
+        <!-- Instagram Login Page -->
+        <a href="https://www.instagram.com/accounts/login" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- YouTube Login Page -->
+        <a href="https://www.youtube.com/login" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> Phone: <a href="tel:5551234567">(555) 123-4567</a></p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@gracehaven.church">info@gracehaven.church</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: 123 Faith Street, Hope City</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>
+      <a href="privacy-policy-terms.html">Privacy Policy</a> | 
+      <a href="privacy-policy-terms.html#terms-of-service">Terms of Service</a>
+    </p>
+    <p>&copy; 2023 Grace Haven Church. All rights reserved.</p>
+    <p>&copy; 2025 Design by <a href="https://alectronic-solutions.github.io/home/" target="_blank">Alectronic Solutions</a>. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Dark Mode Toggle Button -->
+  <button id="dark-mode-toggle" class="dark-mode-toggle">
+    <i class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
